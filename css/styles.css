@@ -64,7 +64,7 @@ body {
   border-radius: 25px;
 }
 
-/* Header */
+/*---------------- Header ----------------*/
 
 .header {
   background-color: #9da4bd;
@@ -102,7 +102,7 @@ body {
   color: var(--main-light-text-color);
 }
 
-/* Hero */
+/*---------------- Hero ----------------*/
 
 .hero {
   background-color: var(--secondary-dark-text-color);
@@ -137,7 +137,7 @@ body {
   color: var(--secondary-light-text-color);
 }
 
-/* About */
+/*---------------- About ----------------*/
 
 .about-top-text {
   color: var(--main-dark-text-color);
@@ -161,7 +161,7 @@ body {
   color: var(--main-dark-text-color);
 }
 
-/* Services */
+/*---------------- Services ----------------*/
 
 .services {
   background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
@@ -188,7 +188,7 @@ body {
   color: var(--main-light-text-color);
 }
 
-/* Benefits */
+/*---------------- Benefits ----------------*/
 
 .benefits-item .count {
   font-weight: 700;
@@ -219,7 +219,7 @@ body {
   color: var(--secondary-dark-text-color);
 }
 
-/* Barbers */
+/*---------------- Barbers ----------------*/
 
 .barbers-top-text {
   color: var(--main-dark-text-color);
@@ -242,8 +242,76 @@ body {
   color: var(--accent-color);
 }
 
-/* Gallery */
+/*---------------- Gallery ----------------*/
 
 .gallery-top-text {
   color: var(--main-dark-text-color);
+}
+
+/*---------------- Booking ----------------*/
+
+.booking-title {
+  color: var(--main-light-text-color);
+}
+
+/*---------------- Contacts ----------------*/
+
+.contacts-title {
+  color: var(--main-light-text-color);
+}
+.contacts-address-link {
+  font-style: normal;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: var(--secondary-light-text-color);
+}
+
+.address {
+  font-weight: 700;
+}
+
+.email {
+  text-decoration-line: underline;
+}
+
+.contacts-time-title {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  text-transform: uppercase;
+  color: var(--main-light-text-color);
+}
+
+.contacts-time-text {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: var(--secondary-light-text-color);
+}
+
+/*---------------- Footer ----------------*/
+
+.footer-text {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+  color: var(--secondary-light-text-color);
+}
+
+.footer-item {
+}
+
+.footer-link {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+  color: var(--main-dark-text-color);
+  transition: all 0.1s ease-in;
+}
+
+.footer-link:is(:hover, :focus) {
+  color: var(--accent-color);
 }
