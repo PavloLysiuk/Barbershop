@@ -4,6 +4,11 @@
   --main-light-text-color: #ffffff;
   --secondary-light-text-color: #9da4bd;
   --accent-color: #ff6c00;
+  --hero-gradient: rgba(25, 28, 38, 0.2);
+  --services-gradient: rgba(17, 19, 25, 0.8);
+  --contacts-gradient: rgba(25, 28, 38, 0.8);
+  --element-gap: 30px;
+  --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 h1,
@@ -56,6 +61,7 @@ a {
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
+
   color: var(--secondary-dark-text-color);
 }
 
@@ -89,25 +95,24 @@ body {
   line-height: 1.33;
   letter-spacing: 0.09em;
   text-transform: uppercase;
+
   background-color: transparent;
   border: 1px solid var(--accent-color);
   border-radius: 25px;
   cursor: pointer;
-  transition: all 0.1s ease-in;
+  transition: color var(--transition), background var(--transition);
 }
 
 .btn:is(:hover, :focus) {
   color: var(--main-light-text-color);
   background: var(--accent-color);
-  border: 1px solid var(--accent-color);
-  border-radius: 25px;
 }
 
 .container {
   padding: 0 15px;
   max-width: 100%;
 
-  outline: 1px solid tomato;
+  /* outline: 1px solid tomato; */
 }
 
 /**----------------------- Media Query -----------------------*/
@@ -132,33 +137,71 @@ body {
   }
 }
 
-/*---------------- Header ----------------*/
+/**---------------- Header ----------------*/
 
 .header {
-  background-color: #9da4bd;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  width: 1200px;
+  margin-top: 32px;
+}
+
+.header-logo {
+  fill: var(--main-dark-text-color);
+
+  transition: fill var(--transition);
+}
+
+.header-logo:is(:hover, :focus) {
+  fill: var(--accent-color);
+}
+
+.header-nav {
+  margin-left: 100px;
+}
+
+.header-list {
+  display: flex;
+  gap: var(--element-gap);
 }
 
 .header-link {
+  padding: 20px 0;
+
   font-weight: 600;
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.1em;
+
   color: var(--main-light-text-color);
-  transition: all 0.1s ease-in;
+  transition: color var(--transition);
 }
 
 .header-link:is(:hover, :focus) {
   color: var(--accent-color);
 }
 
+.header-contacts {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 43px;
+}
+
 .header-tel {
+  padding: 20px 0;
+
   font-weight: 600;
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+
   color: var(--main-light-text-color);
-  transition: all 0.1s ease-in;
+  transition: color var(--transition);
 }
 
 .header-tel:is(:hover, :focus) {
@@ -167,13 +210,27 @@ body {
 
 .header-btn {
   padding: 12px 20px;
+
   color: var(--main-light-text-color);
 }
 
-/*---------------- Hero ----------------*/
+/**---------------- Hero ----------------*/
 
 .hero {
-  background-color: var(--secondary-dark-text-color);
+  padding: 272px 0 208px 100px;
+
+  background-color: var(--main-dark-text-color);
+  background-image: linear-gradient(var(--hero-gradient), var(--hero-gradient)), url(./../images/hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  transform: rotate(-90deg);
 }
 
 .hero-link {
@@ -181,8 +238,9 @@ body {
   font-size: 11px;
   line-height: 1.36;
   letter-spacing: 0.2em;
+
   color: var(--main-dark-text-color);
-  transition: all 0.1s ease-in;
+  transition: color var(--transition);
 }
 
 .hero-link:is(:hover, :focus) {
@@ -194,45 +252,83 @@ body {
 }
 
 .hero-title {
+  margin-top: 20px;
+
   font-family: 'Raleway', sans-serif;
   font-size: 72px;
   line-height: 1.18;
   letter-spacing: 0.05em;
+
   color: var(--main-light-text-color);
 }
 
 .hero-bottom-text {
+  margin-top: 20px;
+  max-width: 360px;
+
   color: var(--secondary-light-text-color);
 }
 
-/*---------------- About ----------------*/
+/**---------------- About ----------------*/
+
+.about {
+  display: flex;
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.about-list {
+  display: flex;
+  gap: var(--element-gap);
+}
+
+.about-content-wrapper {
+  margin-left: 30px;
+  max-width: 470px;
+}
 
 .about-top-text {
   color: var(--main-dark-text-color);
 }
 
 .about-title {
+  margin-top: 20px;
+
   color: var(--main-dark-text-color);
 }
 
 .about-bottom-text {
+  margin-top: 20px;
+
   color: var(--secondary-dark-text-color);
 }
 
 .about-text {
+  margin-top: 20px;
+
   line-height: 1.86;
   letter-spacing: 0.02em;
 }
 
 .about-btn {
+  margin-top: 42px;
   padding: 12px 20px;
   color: var(--main-dark-text-color);
 }
 
-/*---------------- Services ----------------*/
+/**---------------- Services ----------------*/
 
 .services {
-  background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+  background-color: #111319;
+  background-image: linear-gradient(var(--services-gradient), var(--services-gradient)), url(./../images/services.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.services-wrapper {
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 .services-top-text {
@@ -241,6 +337,32 @@ body {
 
 .services-title {
   color: var(--main-light-text-color);
+}
+
+.services-list-wrapper {
+  margin-top: 44px;
+  display: flex;
+  justify-content: center;
+  gap: var(--element-gap);
+}
+
+.services-list-left {
+  padding: 30px 20px;
+  width: 570px;
+
+  background-color: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+}
+
+.services-list-right {
+  padding: 30px 20px;
+  width: 570px;
+
+  background-color: llinear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+}
+
+.services-item {
+  display: flex;
+  justify-content: space-between;
 }
 
 .service-text {
@@ -252,13 +374,41 @@ body {
 }
 
 .services-btn {
+  display: block;
+  margin: 0 auto;
+  margin-top: 44px;
   padding: 12px 20px;
+
   color: var(--main-light-text-color);
 }
 
-/*---------------- Benefits ----------------*/
+/**---------------- Benefits ----------------*/
+
+.benefits {
+  padding: 120px 67px;
+  display: flex;
+}
+
+.benefits-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+
+  max-width: 380px;
+}
+
+.benefits-item {
+  padding: 20px 24px;
+  width: 170px;
+  height: 133px;
+
+  text-align: center;
+
+  background-color: #f7f7f7;
+}
 
 .benefits-item .count {
+  position: relative;
   font-weight: 700;
   font-size: 42px;
   line-height: 1.36;
@@ -267,7 +417,21 @@ body {
   color: var(--main-dark-text-color);
 }
 
+.benefits-item .count::after {
+  position: absolute;
+  top: 7px;
+  content: '+';
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.37;
+  text-align: center;
+
+  color: var(--accent-color);
+}
+
 .benefits-item-text {
+  margin-top: 6px;
+
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
@@ -275,48 +439,134 @@ body {
   color: var(--main-dark-text-color);
 }
 
+.benefits-item:nth-child(2n) {
+  margin-top: 46px;
+}
+
+.benefits-content-wrapper {
+  margin-left: 130px;
+}
+
 .benefits-top-text {
   color: var(--main-dark-text-color);
 }
 
 .benefits-title {
+  margin-top: 20px;
   color: var(--main-dark-text-color);
 }
 
 .benefits-bottom-text {
+  margin-top: 20px;
   color: var(--secondary-dark-text-color);
 }
 
-/*---------------- Barbers ----------------*/
+.barbers-social-list {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.barbers-social-item {
+  position: relative;
+  display: flex;
+}
+
+.barbers-social-link {
+  width: 44px;
+  height: 44px;
+
+  background-color: white;
+  fill: var(--main-dark-text-color);
+  border-radius: 50%;
+
+  transition: fill var(--transition);
+}
+
+.barbers-social-link:is(:hover, :focus) {
+  fill: var(--accent-color);
+}
+
+.barbers-social-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/**---------------- Barbers ----------------*/
+
+.barbers {
+  background-color: #f7f7f7;
+}
+
+.barbers-wrapper {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
 
 .barbers-top-text {
   color: var(--main-dark-text-color);
 }
 
 .barbers-title {
+  margin-top: 20px;
+
   color: var(--main-dark-text-color);
 }
 
+.barbers-list {
+  margin-top: 44px;
+  display: flex;
+  gap: var(--element-gap);
+}
+
 .barbers-item-title {
+  margin-top: 30px;
+
   font-size: 18px;
+  font-weight: 400;
   line-height: 1.39;
   letter-spacing: 0.02em;
+  text-align: center;
+
   color: var(--main-dark-text-color);
 }
 
 .barbers-item-text {
+  margin-top: 8px;
+
   line-height: 1.36;
   letter-spacing: 0.02em;
+  text-align: center;
+
   color: var(--accent-color);
 }
 
-/*---------------- Gallery ----------------*/
+/**---------------- Gallery ----------------*/
 
+.gallery {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.gallery-list {
+  margin-top: 44px;
+  display: flex;
+  justify-content: space-between;
+}
 .gallery-top-text {
   color: var(--main-dark-text-color);
 }
 
 /*---------------- Booking ----------------*/
+
+.booking {
+  padding-top: 130px;
+  padding-bottom: 183px;
+  background: #191c26;
+}
 
 .booking-title {
   color: var(--main-light-text-color);
@@ -324,14 +574,36 @@ body {
 
 /*---------------- Contacts ----------------*/
 
+.contacts {
+  padding-top: 130px;
+  padding-bottom: 120px;
+  padding-left: 100px;
+
+  background-image: linear-gradient(var(--contacts-gradient), var(--contacts-gradient)),
+    url(./../images/contacts-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .contacts-title {
   color: var(--main-light-text-color);
 }
+
+.contacts-address {
+  margin-top: 40px;
+}
+
+.contacts-address-item:not(:first-child) {
+  margin-top: 20px;
+}
+
 .contacts-address-link {
   font-style: normal;
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
+
   color: var(--secondary-light-text-color);
 }
 
@@ -344,37 +616,64 @@ body {
 }
 
 .contacts-time-title {
+  margin-top: 70px;
+
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
   text-transform: uppercase;
+
   color: var(--main-light-text-color);
 }
 
 .contacts-time-text {
+  margin-top: 20px;
+
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
+
   color: var(--secondary-light-text-color);
 }
 
 /*---------------- Footer ----------------*/
+
+.footer {
+  background-color: #f7f7f7;
+}
+
+.footer-wrapper {
+  display: flex;
+  align-items: center;
+}
 
 .footer-text {
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
   letter-spacing: 0.2em;
+
   color: var(--secondary-light-text-color);
 }
 
+.footer-list {
+  display: flex;
+  margin-left: auto;
+  gap: 40px;
+}
+
 .footer-link {
+  display: block;
+  padding: 56px 0;
+
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
   letter-spacing: 0.2em;
+
   color: var(--main-dark-text-color);
-  transition: all 0.1s ease-in;
+
+  transition: color var(--transition);
 }
 
 .footer-link:is(:hover, :focus) {
