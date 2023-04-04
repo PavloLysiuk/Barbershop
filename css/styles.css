@@ -89,6 +89,9 @@ body {
 }
 
 .btn {
+  width: 160px;
+  height: 40px;
+
   font-family: inherit;
   font-weight: 600;
   font-size: 12px;
@@ -96,9 +99,11 @@ body {
   letter-spacing: 0.09em;
   text-transform: uppercase;
 
+  color: var(--main-light-text-color);
   background-color: transparent;
   border: 1px solid var(--accent-color);
-  border-radius: 25px;
+  border-radius: 20px;
+
   cursor: pointer;
   transition: color var(--transition), background var(--transition);
 }
@@ -112,7 +117,7 @@ body {
   padding: 0 15px;
   max-width: 100%;
 
-  /* outline: 1px solid tomato; */
+  outline: 1px solid tomato;
 }
 
 /**----------------------- Media Query -----------------------*/
@@ -208,16 +213,17 @@ body {
   color: var(--accent-color);
 }
 
-.header-btn {
-  padding: 12px 20px;
-
-  color: var(--main-light-text-color);
-}
-
 /**---------------- Hero ----------------*/
 
-.hero {
-  padding: 272px 0 208px 100px;
+.hero-container {
+  margin: 0 auto;
+  display: flex;
+  width: 1200px;
+}
+
+.hero-wrapper {
+  padding: 272px 100px 208px;
+  flex-grow: 1;
 
   background-color: var(--main-dark-text-color);
   background-image: linear-gradient(var(--hero-gradient), var(--hero-gradient)), url(./../images/hero.jpg);
@@ -227,9 +233,10 @@ body {
 }
 
 .hero-list {
-  position: absolute;
   top: 0;
   left: 0;
+
+  width: 100px;
 
   display: flex;
   align-items: center;
@@ -276,9 +283,13 @@ body {
 /**---------------- About ----------------*/
 
 .about {
-  display: flex;
   padding-top: 120px;
   padding-bottom: 120px;
+}
+
+.about-wrapper {
+  display: flex;
+  gap: var(--element-gap);
 }
 
 .about-list {
@@ -287,7 +298,6 @@ body {
 }
 
 .about-content-wrapper {
-  margin-left: 30px;
   max-width: 470px;
 }
 
@@ -316,23 +326,20 @@ body {
 
 .about-btn {
   margin-top: 42px;
-  padding: 12px 20px;
   color: var(--main-dark-text-color);
 }
 
 /**---------------- Services ----------------*/
 
 .services {
+  padding-top: 120px;
+  padding-bottom: 120px;
+
   background-color: #111319;
   background-image: linear-gradient(var(--services-gradient), var(--services-gradient)), url(./../images/services.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.services-wrapper {
-  padding-top: 120px;
-  padding-bottom: 120px;
 }
 
 .services-top-text {
@@ -344,28 +351,17 @@ body {
 }
 
 .services-list-wrapper {
-  margin-top: 44px;
   display: flex;
   justify-content: center;
+  margin-top: 44px;
   gap: var(--element-gap);
 }
 
-.services-list-left {
+.services-list {
   padding: 30px 20px;
-  width: 570px;
+  width: calc((100% - var(--element-gap)) / 2);
 
   background-color: rgba(15, 15, 20, 0.5);
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-}
-
-.services-list-right {
-  padding: 30px 20px;
-  width: 570px;
-
-  background-color: rgba(15, 15, 20, 0.5);
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
 }
 
 .services-item {
@@ -389,15 +385,15 @@ body {
   display: block;
   margin: 0 auto;
   margin-top: 44px;
-  padding: 12px 20px;
-
-  color: var(--main-light-text-color);
 }
 
 /**---------------- Benefits ----------------*/
 
 .benefits {
   padding: 120px 67px;
+}
+
+.benefits-wrapper {
   display: flex;
 }
 
@@ -510,12 +506,10 @@ body {
 /**---------------- Barbers ----------------*/
 
 .barbers {
-  background-color: #f7f7f7;
-}
-
-.barbers-wrapper {
   padding-top: 120px;
   padding-bottom: 120px;
+
+  background-color: #f7f7f7;
 }
 
 .barbers-top-text {
@@ -572,7 +566,7 @@ body {
   color: var(--main-dark-text-color);
 }
 
-/*---------------- Booking ----------------*/
+/**---------------- Booking ----------------*/
 
 .booking {
   padding-top: 130px;
@@ -580,16 +574,17 @@ body {
   background: #191c26;
 }
 
+.section-wrapper {
+  display: flex;
+}
+
 .booking-title {
   color: var(--main-light-text-color);
 }
 
-/*---------------- Contacts ----------------*/
-
 .contacts {
-  padding-top: 130px;
-  padding-bottom: 120px;
   padding-left: 100px;
+  width: calc(100% / 2);
 
   background-image: linear-gradient(var(--contacts-gradient), var(--contacts-gradient)),
     url(./../images/contacts-bg.jpg);
@@ -648,7 +643,7 @@ body {
   color: var(--secondary-light-text-color);
 }
 
-/*---------------- Footer ----------------*/
+/**---------------- Footer ----------------*/
 
 .footer {
   background-color: #f7f7f7;
