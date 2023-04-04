@@ -6,7 +6,7 @@
   --accent-color: #ff6c00;
   --hero-gradient: rgba(25, 28, 38, 0.2);
   --services-gradient: rgba(17, 19, 25, 0.8);
-  --contacts-gradient: rgba(25, 28, 38, 0.8);
+  --contacts-gradient: rgba(25, 28, 38, 0.85);
   --element-gap: 30px;
   --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -350,19 +350,27 @@ body {
   padding: 30px 20px;
   width: 570px;
 
-  background-color: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+  background-color: rgba(15, 15, 20, 0.5);
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
 }
 
 .services-list-right {
   padding: 30px 20px;
   width: 570px;
 
-  background-color: llinear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+  background-color: rgba(15, 15, 20, 0.5);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 .services-item {
   display: flex;
   justify-content: space-between;
+}
+
+.services-item:not(:first-child) {
+  margin-top: 20px;
 }
 
 .service-text {
