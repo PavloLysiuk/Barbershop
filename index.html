@@ -425,6 +425,44 @@
         <div class="section-wrapper container">
           <div class="online">
             <h2 class="booking-title title">Online-booking</h2>
+
+            <form class="online-form">
+              <div class="online-field">
+                <input
+                  class="online-input online-item"
+                  id="online-name"
+                  type="text"
+                  name="online-name"
+                  required
+                  placeholder=" "
+                />
+                <label class="online-label" for="online-name">NAME*</label>
+              </div>
+
+              <div class="online-field">
+                <input
+                  class="online-input online-item"
+                  id="online-tel"
+                  type="tel"
+                  name="online-tel"
+                  required
+                  placeholder=" "
+                />
+                <label class="online-label" for="online-tel">PHONE*</label>
+              </div>
+
+              <div class="online-field online-field-text">
+                <textarea
+                  class="online-texarea online-item"
+                  name="online-message"
+                  id="online-message"
+                  placeholder=" "
+                ></textarea>
+                <label class="online-label" for="online-message">MESSAGE</label>
+
+                <button class="online-button btn" type="submit">SEND</button>
+              </div>
+            </form>
           </div>
 
           <div class="contacts">
