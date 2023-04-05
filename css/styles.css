@@ -579,6 +579,31 @@ body {
   gap: var(--element-gap);
 }
 
+.barbers-overlay-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.barbers-overlay {
+  position: absolute;
+  padding: 20px;
+  height: 100%;
+  top: 0;
+
+  font-size: 17px;
+  line-height: 1.5;
+
+  color: var(--main-light-text-color);
+  background-color: var(--accent-color);
+
+  transform: translateY(100%);
+  transition: transform var(--transition);
+}
+
+.barbers-item:hover .barbers-overlay {
+  transform: translateY(0%);
+}
+
 .barbers-item-title {
   margin-top: 30px;
 
