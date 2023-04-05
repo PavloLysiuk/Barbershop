@@ -177,7 +177,7 @@ body {
 }
 
 .header-nav {
-  margin-left: 100px;
+  margin-left: 131px;
 }
 
 .header-list {
@@ -244,13 +244,29 @@ body {
   background-size: cover;
 }
 
-.hero-list {
-  width: 100px;
+.hero-list-wrapper {
+  display: flex;
+  align-items: flex-end;
+  padding-left: 42px;
+  padding-bottom: 40px;
+  width: 115px;
+}
 
+.hero-list {
   display: flex;
   align-items: center;
   gap: 40px;
-  transform: rotate(-90deg);
+
+  transform: rotate(-90deg) translateY(100%);
+  transform-origin: bottom left;
+}
+
+.hero-list::before {
+  content: '';
+  width: 60px;
+  height: 1px;
+
+  background-color: currentColor;
 }
 
 .hero-link {
