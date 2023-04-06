@@ -520,40 +520,6 @@ body {
   color: var(--secondary-dark-text-color);
 }
 
-.barbers-social-list {
-  margin-top: 30px;
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
-
-.barbers-social-item {
-  position: relative;
-  display: flex;
-}
-
-.barbers-social-link {
-  width: 44px;
-  height: 44px;
-
-  background-color: white;
-  fill: var(--main-dark-text-color);
-  border-radius: 50%;
-
-  transition: fill var(--transition);
-}
-
-.barbers-social-link:is(:hover, :focus) {
-  fill: var(--accent-color);
-}
-
-.barbers-social-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 /**---------------- Barbers ----------------*/
 
 .barbers {
@@ -624,6 +590,44 @@ body {
   text-align: center;
 
   color: var(--accent-color);
+}
+
+.barbers-social-list {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.barbers-social-item {
+  position: relative;
+  display: flex;
+}
+
+.barbers-social-link {
+  width: 44px;
+  height: 44px;
+
+  background-color: white;
+  fill: var(--main-dark-text-color);
+  border-radius: 50%;
+
+  transform: scale(1);
+
+  transition: fill var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+
+.barbers-social-link:is(:hover, :focus) {
+  fill: var(--accent-color);
+  transform: scale(1.2);
+  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.04);
+}
+
+.barbers-social-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /**---------------- Gallery ----------------*/

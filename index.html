@@ -432,7 +432,9 @@
                   class="online-input online-item"
                   id="online-name"
                   type="text"
-                  name="online-name"
+                  name="online_name"
+                  minlength="2"
+                  pattern="[a-zA-Zа-яА-ЯіІїЇєЄґҐ]+"
                   required
                   placeholder=" "
                 />
@@ -445,6 +447,8 @@
                   id="online-tel"
                   type="tel"
                   name="online-tel"
+                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+                  title="xxx-xxx-xx-xx"
                   required
                   placeholder=" "
                 />
@@ -454,7 +458,7 @@
               <div class="online-field online-field-text">
                 <textarea
                   class="online-texarea online-item"
-                  name="online-message"
+                  name="online_message"
                   id="online-message"
                   placeholder=" "
                 ></textarea>
