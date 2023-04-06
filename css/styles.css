@@ -129,7 +129,7 @@ body {
   padding: 0 15px;
   max-width: 100%;
 
-  outline: 1px solid tomato;
+  /* outline: 1px solid tomato; */
 }
 
 /**----------------------- Media Query -----------------------*/
@@ -731,17 +731,20 @@ body {
   outline: transparent;
 }
 
+/**---------------- Contacts ----------------*/
+
 .contacts {
   padding-top: 130px;
   padding-bottom: 130px;
   padding-left: 100px;
-  width: calc((100% / 2) + 15px);
+  width: calc((100% / 2) - 15px);
+  flex-grow: 1;
 
-  /* background-image: linear-gradient(var(--contacts-gradient), var(--contacts-gradient)),
+  background-image: linear-gradient(var(--contacts-gradient), var(--contacts-gradient)),
     url(./../images/contacts-bg.jpg);
   background-position: center;
   background-size: cover;
-  background-repeat: no-repeat; */
+  background-repeat: no-repeat;
 }
 
 .contacts-title {
@@ -840,6 +843,16 @@ body {
   display: flex;
   margin-left: auto;
   gap: 40px;
+
+  align-items: center;
+}
+
+.footer-list::before {
+  content: '';
+  width: 60px;
+  height: 1px;
+
+  background-color: currentColor;
 }
 
 .footer-link {
