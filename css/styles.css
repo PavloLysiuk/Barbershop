@@ -151,6 +151,8 @@
 .hero-container {
   margin: 0 auto;
   padding: 0;
+
+  outline: 1px solid tomato;
 }
 
 .hero-wrapper {
@@ -190,7 +192,7 @@
   margin-top: 20px;
 
   font-family: 'Raleway', sans-serif;
-  font-size: 48px;
+  font-size: 44px;
   line-height: 1.18;
   letter-spacing: 0.05em;
 
@@ -198,7 +200,7 @@
 }
 
 .bottom-text {
-  font-size: 16px;
+  font-size: 13px;
   line-height: 1.67;
   letter-spacing: 0.02em;
 }
@@ -217,6 +219,14 @@
 
   .hero-wrapper {
     background-image: linear-gradient(var(--hero-gradient), var(--hero-gradient)), url(./../images/hero-mobile.jpg);
+  }
+
+  .hero-title {
+    font-size: 48px;
+  }
+
+  .bottom-text {
+    font-size: 16px;
   }
 }
 
@@ -337,22 +347,8 @@
 /**---------------- About ----------------*/
 
 .about {
-  padding-top: 120px;
-  padding-bottom: 120px;
-}
-
-.about-wrapper {
-  display: flex;
-  gap: var(--element-gap);
-}
-
-.about-list {
-  display: flex;
-  gap: var(--element-gap);
-}
-
-.about-content-wrapper {
-  max-width: 470px;
+  padding-top: 84px;
+  padding-bottom: 84px;
 }
 
 .about-top-text {
@@ -361,6 +357,9 @@
 
 .about-title {
   margin-top: 20px;
+  max-width: 306px;
+
+  font-size: 28px;
 
   color: var(--main-dark-text-color);
 }
@@ -379,8 +378,66 @@
 }
 
 .about-btn {
-  margin-top: 42px;
+  margin-top: 40px;
   color: var(--main-dark-text-color);
+}
+
+@media screen and (max-width: 767px) {
+  .about-list {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .about {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .about-wrapper {
+    display: flex;
+    gap: var(--element-gap);
+  }
+
+  .about-list {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    gap: var(--element-gap);
+  }
+
+  .about-content-wrapper {
+    max-width: 330px;
+  }
+
+  .about-btn {
+    margin-top: 77px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .about {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  .about-list {
+    flex-direction: row;
+  }
+
+  .about-content-wrapper {
+    max-width: 470px;
+  }
+
+  .about-title {
+    max-width: 470px;
+
+    font-size: 42px;
+  }
+
+  .about-btn {
+    margin-top: 42px;
+  }
 }
 
 /**---------------- Services ----------------*/
