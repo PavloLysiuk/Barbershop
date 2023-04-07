@@ -49,6 +49,13 @@ a {
   text-decoration: none;
 }
 
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+
+  color: var(--secondary-dark-text-color);
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -60,13 +67,6 @@ a {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-
-body {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
-
-  color: var(--secondary-dark-text-color);
 }
 
 .title {
