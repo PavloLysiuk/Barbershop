@@ -873,11 +873,7 @@
   }
 
   .barbers-list {
-    margin-top: 44px;
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    row-gap: 64px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -887,8 +883,6 @@
   }
 
   .barbers-list {
-    margin-top: 44px;
-    display: flex;
     flex-direction: row;
     gap: var(--element-gap);
   }
