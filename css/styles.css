@@ -758,9 +758,8 @@
 
 .barbers {
   margin: 0 auto;
-  padding-top: 120px;
-  padding-bottom: 120px;
-  max-width: 1600px;
+  padding: 84px 0;
+  max-width: 480px;
 
   background-color: #f7f7f7;
 }
@@ -778,7 +777,8 @@
 .barbers-list {
   margin-top: 44px;
   display: flex;
-  gap: var(--element-gap);
+  flex-direction: column;
+  row-gap: 64px;
 }
 
 .barbers-overlay-wrapper {
@@ -800,10 +800,6 @@
 
   transform: translateY(100%);
   transition: transform var(--transition);
-}
-
-.barbers-item:hover .barbers-overlay {
-  transform: translateY(0%);
 }
 
 .barbers-item-title {
@@ -864,6 +860,38 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.barbers-item:hover .barbers-overlay {
+  transform: translateY(0%);
+}
+
+@media screen and (min-width: 768px) {
+  .barbers {
+    padding: 84px 0;
+    max-width: 768px;
+  }
+
+  .barbers-list {
+    margin-top: 44px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 64px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .barbers {
+    padding: 120px 0;
+    max-width: 1600px;
+  }
+
+  .barbers-list {
+    margin-top: 44px;
+    display: flex;
+    flex-direction: row;
+    gap: var(--element-gap);
+  }
 }
 
 /**---------------- Gallery ----------------*/
