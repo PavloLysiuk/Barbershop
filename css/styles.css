@@ -871,6 +871,7 @@
     align-items: center;
   }
 }
+
 @media screen and (min-width: 1200px) {
   .barbers {
     padding: 120px 0;
@@ -928,36 +929,25 @@
 /**---------------- Booking ----------------*/
 
 .booking {
-  margin: 0 auto;
-  max-width: 1600px;
-
   background: #191c26;
 }
 
-.section-wrapper {
-  display: flex;
-}
-
 .online {
-  width: calc((100% / 2) + 15px);
-  padding-right: 30px;
+  padding: 84px 0;
 }
 
 .booking-title {
-  padding-top: 130px;
   color: var(--main-light-text-color);
 }
 
 .online-form {
   margin-top: 44px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: column;
 }
 
 .online-field {
   position: relative;
-  margin-top: 44px;
 }
 
 .online-field-text {
@@ -1001,7 +991,7 @@
 }
 
 .online-input {
-  width: 270px;
+  width: 100%;
   height: 24px;
 }
 
@@ -1017,17 +1007,11 @@
   outline: transparent;
 }
 
-/**---------------- Contacts ----------------*/
-
 .contacts {
-  padding-top: 130px;
-  padding-bottom: 130px;
-  padding-left: 100px;
-  width: calc((100% / 2) - 15px);
-  flex-grow: 1;
+  padding: 84px 0;
 
   background-image: linear-gradient(var(--contacts-gradient), var(--contacts-gradient)),
-    url(./../images/contacts-bg.jpg);
+    url(./../images/contacts-bg-mobile.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1037,7 +1021,7 @@
   color: var(--main-light-text-color);
 }
 
-.contacts-address {
+.contacts-wrapper {
   margin-top: 40px;
 }
 
@@ -1072,12 +1056,13 @@
   text-decoration-line: underline;
 }
 
+.contacts-time-wrapper {
+  margin-top: 44px;
+}
 .contacts-time-title {
   display: flex;
   align-items: center;
   gap: 20px;
-
-  margin-top: 70px;
 
   font-weight: 600;
   font-size: 11px;
@@ -1103,6 +1088,95 @@
   letter-spacing: 0.02em;
 
   color: var(--secondary-light-text-color);
+}
+
+@media screen and (max-width: 767px) {
+  .booking-title,
+  .contacts-title {
+    text-align: center;
+  }
+
+  .online-field:not(:first-child) {
+    margin-top: 44px;
+  }
+
+  .online-button {
+    margin: 0 auto;
+    margin-top: 44px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .online {
+    padding: 100px 0;
+  }
+
+  .online-form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .online-input {
+    width: 270px;
+  }
+
+  .online-field-text {
+    margin-top: 44px;
+  }
+
+  .contacts {
+    padding: 100px 0;
+    width: 100%;
+
+    background-image: linear-gradient(var(--contacts-gradient), var(--contacts-gradient)),
+      url(./../images/contacts-bg-tablet.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contacts-wrapper {
+    margin-top: 40px;
+    display: flex;
+  }
+
+  .contacts-time-wrapper {
+    margin-top: 8px;
+    margin-left: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .booking {
+    margin: 0 auto;
+    max-width: 1600px;
+
+    background: #191c26;
+  }
+
+  .section-wrapper {
+    display: flex;
+  }
+
+  .online {
+    padding: 130px 0;
+    width: calc((100% / 2) + 15px);
+    padding-right: 30px;
+  }
+
+  .contacts {
+    padding: 130px 0;
+    padding-left: 100px;
+    width: calc((100% / 2) - 15px);
+    flex-grow: 1;
+
+    background-image: linear-gradient(var(--contacts-gradient), var(--contacts-gradient)),
+      url(./../images/contacts-bg-desktop.jpg);
+  }
+
+  .contacts-time-wrapper {
+    margin-top: 70px;
+  }
 }
 
 /**---------------- Footer ----------------*/
