@@ -929,6 +929,9 @@
 /**---------------- Booking ----------------*/
 
 .booking {
+  margin: 0 auto;
+  max-width: 480px;
+
   background: #191c26;
 }
 
@@ -1008,8 +1011,6 @@
 }
 
 .contacts {
-  padding: 84px 0;
-
   background-image: linear-gradient(var(--contacts-gradient), var(--contacts-gradient)),
     url(./../images/contacts-bg-mobile.jpg);
   background-position: center;
@@ -1023,6 +1024,7 @@
 
 .contacts-wrapper {
   margin-top: 40px;
+  padding: 84px 0;
 }
 
 .contacts-address-item {
@@ -1107,6 +1109,10 @@
 }
 
 @media screen and (min-width: 768px) {
+  .booking {
+    max-width: 768px;
+  }
+
   .online {
     padding: 100px 0;
   }
@@ -1148,10 +1154,7 @@
 
 @media screen and (min-width: 1200px) {
   .booking {
-    margin: 0 auto;
     max-width: 1600px;
-
-    background: #191c26;
   }
 
   .section-wrapper {
@@ -1183,17 +1186,18 @@
 
 .footer {
   margin: 0 auto;
-  max-width: 1600px;
+  max-width: 480px;
 
   background-color: #f7f7f7;
 }
 
 .footer-wrapper {
   display: flex;
-  align-items: center;
 }
 
 .footer-text {
+  padding: 10px 0;
+
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
@@ -1220,7 +1224,7 @@
 
 .footer-link {
   display: block;
-  padding: 56px 0;
+  padding: 10px 0;
 
   font-weight: 600;
   font-size: 11px;
@@ -1234,4 +1238,40 @@
 
 .footer-link:is(:hover, :focus) {
   color: var(--accent-color);
+}
+
+@media screen and (max-width: 767px) {
+  .footer-wrapper {
+    flex-direction: column;
+    padding: 34px 0;
+  }
+
+  .footer-text {
+    align-items: start;
+    order: 2;
+  }
+
+  .footer-list {
+    order: 1;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    max-width: 768px;
+  }
+
+  .footer-wrapper {
+    align-items: center;
+  }
+
+  .footer-link {
+    padding: 56px 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer {
+    max-width: 1600px;
+  }
 }
