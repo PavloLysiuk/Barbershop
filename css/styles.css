@@ -365,7 +365,7 @@
 }
 
 .about-bottom-text {
-  margin-top: 16px;
+  margin-top: 20px;
 }
 
 .about-text {
@@ -401,19 +401,14 @@
     max-width: 330px;
   }
 
-  .about-bottom-text {
-    margin-top: 18px;
-  }
-
   .about-list {
     display: flex;
     flex-direction: column;
-    flex-shrink: 0;
     gap: var(--element-gap);
   }
 
   .about-btn {
-    margin-top: 77px;
+    margin-top: 45px;
   }
 }
 
