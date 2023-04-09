@@ -35,6 +35,7 @@
           <use href="./images/icons.svg#logo"></use>
         </svg>
       </a>
+
       <nav class="header-nav">
         <ul class="header-list">
           <li class="header-item">
@@ -54,22 +55,60 @@
           </li>
         </ul>
       </nav>
+
       <div class="header-contacts">
         <a class="header-tel" href="tel:+380441111111">+38 044 111 11 11</a>
         <a class="header-button btn" type="button" href="#contacts">Online-booking</a>
       </div>
 
-      <div class="header-open-button">
-        <svg class="header-open-button-icon" width="40" height="40">
+      <button class="mobile-open-button js-open-menu" aria-expanded="false" aria-controls="mobile-menu" type="button">
+        <svg class="mobile-open-button-icon" width="40" height="40">
           <use href="./images/icons.svg#menu-open"></use>
         </svg>
-      </div>
+      </button>
     </header>
 
     <!-- Main -->
 
     <main>
       <!-- Hero -->
+
+      <div class="mobile-menu-wrapper">
+        <div class="mobile-menu-backdrop mobile-menu-container js-menu-container">
+          <div class="mobile-menu">
+            <button class="mobile-close-button js-close-menu">
+              <svg class="mobile-close-button-icon" width="40" height="40">
+                <use href="./images/icons.svg#menu-close"></use>
+              </svg>
+            </button>
+
+            <div class="mobile-menu-nav">
+              <ul class="mobile-menu-list">
+                <li class="mobile-menu-item"><a href="#about" class="mobile-menu-link">About</a></li>
+                <li class="mobile-menu-item"><a href="#services" class="mobile-menu-link">Services and prices</a></li>
+                <li class="mobile-menu-item"><a href="#barbers" class="mobile-menu-link">Barbers</a></li>
+                <li class="mobile-menu-item"><a href="#contacts" class="mobile-menu-link">Contacts</a></li>
+              </ul>
+
+              <div class="mobile-menu-contacts">
+                <a class="mobile-menu-tel" href="tel:+380441111111">+38 044 111 11 11</a>
+                <a class="mobile-menu-button btn" type="button" href="#contacts">Online-booking</a>
+              </div>
+
+              <ul class="mobile-social-list">
+                <li class="mobile-social-item">
+                  <a class="mobile-social-link" href="" target="_blank" rel="noopener noreferrer nofollow">
+                    Instagram
+                  </a>
+                </li>
+                <li class="mobile-social-item">
+                  <a class="mobile-social-link" href="" target="_blank" rel="noopener noreferrer nofollow"> Youtube </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <section class="hero hero-container">
         <div class="hero-list-wrapper">
@@ -695,7 +734,7 @@
       <!-- Booking -->
 
       <section class="booking" id="contacts">
-        <div class="section-wrapper container">
+        <div class="section-wrapper booking-container">
           <div class="online">
             <h2 class="booking-title title">Online-booking</h2>
 
@@ -795,5 +834,13 @@
         </ul>
       </div>
     </footer>
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>
