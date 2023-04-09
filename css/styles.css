@@ -146,18 +146,24 @@
   color: var(--main-dark-text-color);
 }
 
-.mobile-social-list {
+.mobile-social-wrapper {
   margin-top: 64px;
   display: flex;
-  flex-direction: column;
+  gap: 40px;
 }
 
-.mobile-social-list::before {
+.mobile-social-wrapper::before {
   content: '';
+  margin-top: 21px;
   width: 60px;
   height: 1px;
 
   background-color: currentColor;
+}
+
+.mobile-social-list {
+  display: flex;
+  flex-direction: column;
 }
 
 .mobile-social-link {
