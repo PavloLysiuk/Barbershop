@@ -29,49 +29,42 @@
   <body>
     <!-- Navigation -->
 
-    <header class="header container">
-      <a class="header-logo" href="./index.html">
-        <svg class="header-logo-icon" width="69" height="56">
-          <use href="./images/icons.svg#logo"></use>
-        </svg>
-      </a>
+    <header class="header-wrapper">
+      <div class="header container">
+        <a class="header-logo" href="./index.html">
+          <svg class="header-logo-icon" width="69" height="56">
+            <use href="./images/icons.svg#logo"></use>
+          </svg>
+        </a>
 
-      <nav class="header-nav">
-        <ul class="header-list">
-          <li class="header-item">
-            <a class="header-link" href="#about">About</a>
-          </li>
+        <nav class="header-nav">
+          <ul class="header-list">
+            <li class="header-item">
+              <a class="header-link" href="#about">About</a>
+            </li>
+            <li class="header-item">
+              <a class="header-link" href="#services">Services and prices</a>
+            </li>
+            <li class="header-item">
+              <a class="header-link" href="#barbers">Barbers</a>
+            </li>
+            <li class="header-item">
+              <a class="header-link" href="#contacts">Contacts</a>
+            </li>
+          </ul>
+        </nav>
 
-          <li class="header-item">
-            <a class="header-link" href="#services">Services and prices</a>
-          </li>
+        <div class="header-contacts">
+          <a class="header-tel" href="tel:+380441111111">+38 044 111 11 11</a>
+          <a class="header-button btn" type="button" href="#contacts">Online-booking</a>
+        </div>
 
-          <li class="header-item">
-            <a class="header-link" href="#barbers">Barbers</a>
-          </li>
-
-          <li class="header-item">
-            <a class="header-link" href="#contacts">Contacts</a>
-          </li>
-        </ul>
-      </nav>
-
-      <div class="header-contacts">
-        <a class="header-tel" href="tel:+380441111111">+38 044 111 11 11</a>
-        <a class="header-button btn" type="button" href="#contacts">Online-booking</a>
+        <button class="mobile-open-button js-open-menu" aria-expanded="false" aria-controls="mobile-menu" type="button">
+          <svg class="mobile-open-button-icon" width="40" height="40">
+            <use href="./images/icons.svg#menu-open"></use>
+          </svg>
+        </button>
       </div>
-
-      <button class="mobile-open-button js-open-menu" aria-expanded="false" aria-controls="mobile-menu" type="button">
-        <svg class="mobile-open-button-icon" width="40" height="40">
-          <use href="./images/icons.svg#menu-open"></use>
-        </svg>
-      </button>
-    </header>
-
-    <!-- Main -->
-
-    <main>
-      <!-- Hero -->
 
       <div class="mobile-menu-wrapper mobile-menu-container js-menu-container">
         <div class="mobile-menu">
@@ -105,6 +98,12 @@
           </div>
         </div>
       </div>
+    </header>
+
+    <!-- Main -->
+
+    <main>
+      <!-- Hero -->
 
       <section class="hero hero-container">
         <div class="hero-list-wrapper">
@@ -822,10 +821,10 @@
         <p class="footer-text">&copy; Copyright 2020</p>
         <ul class="footer-list">
           <li class="footer-item">
-            <a class="footer-link link" href="" target="_blank" rel="noopener noreferrer nofollow"> Instagram </a>
+            <a class="footer-link" href="" target="_blank" rel="noopener noreferrer nofollow"> Instagram </a>
           </li>
           <li class="footer-item">
-            <a class="footer-link link" href="" target="_blank" rel="noopener noreferrer nofollow"> Youtube </a>
+            <a class="footer-link" href="" target="_blank" rel="noopener noreferrer nofollow"> Youtube </a>
           </li>
         </ul>
       </div>

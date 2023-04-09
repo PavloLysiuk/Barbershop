@@ -418,6 +418,12 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .hero-list {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .hero-container {
     width: 1200px;
