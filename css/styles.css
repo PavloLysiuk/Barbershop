@@ -176,8 +176,7 @@
 
 @media screen and (max-width: 768px) {
   .header-nav,
-  .header-contacts,
-  .hero-list-wrapper {
+  .header-contacts {
     display: none;
   }
 }
