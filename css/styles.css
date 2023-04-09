@@ -1186,6 +1186,7 @@
 
 .footer {
   margin: 0 auto;
+  padding: 34px 0;
   max-width: 480px;
 
   background-color: #f7f7f7;
@@ -1243,11 +1244,9 @@
 @media screen and (max-width: 767px) {
   .footer-wrapper {
     flex-direction: column;
-    padding: 34px 0;
   }
 
   .footer-text {
-    align-items: start;
     order: 2;
   }
 
