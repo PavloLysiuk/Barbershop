@@ -538,7 +538,11 @@
 }
 
 .about-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-top: 40px;
+
   color: var(--main-dark-text-color);
 }
 
@@ -673,7 +677,9 @@
 }
 
 .services-btn {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0 auto;
   margin-top: 44px;
 }
