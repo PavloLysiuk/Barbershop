@@ -350,16 +350,21 @@
     width: 480px;
   }
 
-  .hero-wrapper {
-    background-image: linear-gradient(var(--hero-gradient), var(--hero-gradient)), url(./../images/hero-mobile.jpg);
-  }
-
   .hero-title {
     font-size: 48px;
   }
 
   .bottom-text {
     font-size: 16px;
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
+  screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px),
+  screen and (min-resolution: 192dpi) and (max-width: 767px),
+  screen and (min-resolution: 2dppx) and (max-width: 767px) {
+  .hero-wrapper {
+    background-image: linear-gradient(var(--hero-gradient), var(--hero-gradient)), url(./../images/hero-mobile-@2x.jpg);
   }
 }
 
@@ -373,7 +378,7 @@
     padding: 272px 100px 208px;
     flex-grow: 1;
 
-    background-image: linear-gradient(var(--hero-gradient), var(--hero-gradient)), url(./../images/hero-tablet.jpg);
+    background-image: linear-gradient(var(--hero-gradient), var(--hero-gradient)), url(./../images/hero-mobile.jpg);
   }
 
   .hero-list-wrapper {
@@ -424,6 +429,15 @@
   }
 }
 
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+  screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px),
+  screen and (min-resolution: 192dpi) and (min-width: 768px),
+  screen and (min-resolution: 2dppx) and (min-width: 768px) {
+  .hero-wrapper {
+    background-image: linear-gradient(var(--hero-gradient), var(--hero-gradient)), url(./../images/hero-tablet-@2x.jpg);
+  }
+}
+
 @media screen and (max-width: 768px) {
   .hero-list {
     display: none;
@@ -436,7 +450,7 @@
   }
 
   .hero-wrapper {
-    background-image: linear-gradient(var(--hero-gradient), var(--hero-gradient)), url(./../images/hero.jpg);
+    background-image: linear-gradient(var(--hero-gradient), var(--hero-gradient)), url(./../images/hero-desktop.jpg);
   }
 
   .hero-list-wrapper {
@@ -480,6 +494,15 @@
 
   .hero-title {
     font-size: 72px;
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+  screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1200px),
+  screen and (min-resolution: 192dpi) and (min-width: 1200px),
+  screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+  .hero-wrapper {
+    background-image: linear-gradient(var(--hero-gradient), var(--hero-gradient)), url(./../images/hero-desktop-@2x.jpg);
   }
 }
 
@@ -661,6 +684,16 @@
   }
 }
 
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
+  screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px),
+  screen and (min-resolution: 192dpi) and (max-width: 767px),
+  screen and (min-resolution: 2dppx) and (max-width: 767px) {
+  .services {
+    background-image: linear-gradient(var(--services-gradient), var(--services-gradient)),
+      url(./../images/services-mobile-@2x.jpg);
+  }
+}
+
 @media screen and (min-width: 768px) {
   .services {
     margin: 0 auto;
@@ -687,13 +720,24 @@
   }
 }
 
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+  screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px),
+  screen and (min-resolution: 192dpi) and (min-width: 768px),
+  screen and (min-resolution: 2dppx) and (min-width: 768px) {
+  .services {
+    background-image: linear-gradient(var(--services-gradient), var(--services-gradient)),
+      url(./../images/services-tablet-@2x.jpg);
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .services {
     padding-top: 120px;
     padding-bottom: 120px;
     max-width: 1600px;
 
-    background-image: linear-gradient(var(--services-gradient), var(--services-gradient)), url(./../images/services.jpg);
+    background-image: linear-gradient(var(--services-gradient), var(--services-gradient)),
+      url(./../images/services-desktop.jpg);
   }
 
   .services-list-wrapper {
@@ -717,6 +761,16 @@
 
   .services-item:not(:first-child) {
     margin-top: 20px;
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+  screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1200px),
+  screen and (min-resolution: 192dpi) and (min-width: 1200px),
+  screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+  .services {
+    background-image: linear-gradient(var(--services-gradient), var(--services-gradient)),
+      url(./../images/services-desktop-@2x.jpg);
   }
 }
 
@@ -1153,7 +1207,7 @@
   padding: 84px 30px;
 
   background-image: linear-gradient(var(--contacts-gradient), var(--contacts-gradient)),
-    url(./../images/contacts-bg-mobile.jpg);
+    url(./../images/contacts-mobile.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1248,6 +1302,16 @@
   }
 }
 
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
+  screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px),
+  screen and (min-resolution: 192dpi) and (max-width: 767px),
+  screen and (min-resolution: 2dppx) and (max-width: 767px) {
+  .contacts {
+    background-image: linear-gradient(var(--contacts-gradient), var(--contacts-gradient)),
+      url(./../images/contacts-mobile-@2x.jpg);
+  }
+}
+
 @media screen and (min-width: 768px) {
   .booking {
     max-width: 768px;
@@ -1275,7 +1339,17 @@
     width: 100%;
 
     background-image: linear-gradient(var(--contacts-gradient), var(--contacts-gradient)),
-      url(./../images/contacts-bg-tablet.jpg);
+      url(./../images/contacts-tablet.jpg);
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+  screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px),
+  screen and (min-resolution: 192dpi) and (min-width: 768px),
+  screen and (min-resolution: 2dppx) and (min-width: 768px) {
+  .contacts {
+    background-image: linear-gradient(var(--contacts-gradient), var(--contacts-gradient)),
+      url(./../images/contacts-tablet-@2x.jpg);
   }
 }
 
@@ -1322,11 +1396,21 @@
     flex-grow: 1;
 
     background-image: linear-gradient(var(--contacts-gradient), var(--contacts-gradient)),
-      url(./../images/contacts-bg-desktop.jpg);
+      url(./../images/contacts-desktop.jpg);
   }
 
   .contacts-time-wrapper {
     margin-top: 70px;
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+  screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1200px),
+  screen and (min-resolution: 192dpi) and (min-width: 1200px),
+  screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+  .contacts {
+    background-image: linear-gradient(var(--contacts-gradient), var(--contacts-gradient)),
+      url(./../images/contacts-desktop-@2x.jpg);
   }
 }
 
