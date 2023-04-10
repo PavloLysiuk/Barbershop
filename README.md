@@ -1,2 +1,1 @@
 # Barbershop
-GOIT homework
