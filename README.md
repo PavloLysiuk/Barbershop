@@ -1,2 +1,2 @@
-# barbershop-website
+# Barbershop
 GOIT homework
