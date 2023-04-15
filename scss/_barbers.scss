@@ -1,0 +1,132 @@
+.barbers {
+  margin: 0 auto;
+  padding: 84px 0;
+  max-width: 480px;
+
+  background-color: #f7f7f7;
+}
+
+.barbers-top-text {
+  color: var(--main-dark-text-color);
+}
+
+.barbers-title {
+  margin-top: 20px;
+
+  color: var(--main-dark-text-color);
+}
+
+.barbers-list {
+  margin-top: 44px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 64px;
+}
+
+.barbers-overlay-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.barbers-overlay {
+  position: absolute;
+  padding: 20px;
+  height: 100%;
+  top: 0;
+
+  font-size: 17px;
+  line-height: 1.5;
+
+  color: var(--main-light-text-color);
+  background-color: var(--accent-color);
+
+  transform: translateY(100%);
+  transition: transform var(--transition);
+}
+
+.barbers-item-title {
+  margin-top: 30px;
+
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.39;
+  letter-spacing: 0.02em;
+  text-align: center;
+
+  color: var(--main-dark-text-color);
+}
+
+.barbers-item-text {
+  margin-top: 8px;
+
+  line-height: 1.36;
+  letter-spacing: 0.02em;
+  text-align: center;
+
+  color: var(--accent-color);
+}
+
+.barbers-social-list {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.barbers-social-item {
+  position: relative;
+  display: flex;
+}
+
+.barbers-social-link {
+  width: 44px;
+  height: 44px;
+
+  background-color: white;
+  fill: var(--main-dark-text-color);
+  border-radius: 50%;
+
+  transform: scale(1);
+
+  transition: fill var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+
+.barbers-social-link:is(:hover, :focus) {
+  fill: var(--accent-color);
+  transform: scale(1.2);
+  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.04);
+}
+
+.barbers-social-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.barbers-item:hover .barbers-overlay {
+  transform: translateY(0%);
+}
+
+@media screen and (min-width: 768px) {
+  .barbers {
+    padding: 84px 0;
+    max-width: 768px;
+  }
+
+  .barbers-list {
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .barbers {
+    padding: 120px 0;
+    max-width: 1600px;
+  }
+
+  .barbers-list {
+    flex-direction: row;
+    gap: var(--element-gap);
+  }
+}

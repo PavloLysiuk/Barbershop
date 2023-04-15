@@ -1,0 +1,292 @@
+.booking {
+    margin: 0 auto;
+    max-width: 480px;
+  
+    background: #191c26;
+  }
+  
+  .online {
+    padding: 84px 30px;
+  }
+  
+  .booking-title {
+    color: var(--main-light-text-color);
+  }
+  
+  .online-form {
+    margin-top: 44px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .online-field {
+    position: relative;
+  }
+  
+  .online-field-text {
+    width: 100%;
+  }
+  
+  .online-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+  
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  
+    color: rgba(157, 164, 189, 0.4);
+  
+    transition: color var(--transition), transform var(--transition);
+  }
+  
+  .online-item {
+    color: var(--secondary-light-text-color);
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+    outline: transparent;
+    transition: border-bottom var(--transition);
+  }
+  
+  .online-item:focus,
+  .online-item:not(:placeholder-shown) {
+    border-color: #ffffff;
+  }
+  
+  .online-item:focus + .online-label,
+  .online-item:not(:placeholder-shown) + .online-label {
+    color: #ffffff;
+    transform: translateY(-100%);
+  }
+  
+  .online-input {
+    width: 100%;
+    height: 24px;
+  }
+  
+  .online-texarea {
+    width: 100%;
+    height: 76px;
+    resize: none;
+  }
+  
+  .online-button {
+    margin-top: 44px;
+  
+    outline: transparent;
+  }
+  
+  .contacts {
+    padding: 84px 30px;
+  
+    background-image: linear-gradient(var(--contacts-gradient), var(--contacts-gradient)),
+      url(./../images/contacts-mobile.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .contacts-title {
+    color: var(--main-light-text-color);
+  }
+  
+  .contacts-wrapper {
+    margin-top: 40px;
+  }
+  
+  .contacts-address-item {
+    display: flex;
+    align-items: center;
+  }
+  
+  .contacts-address-item:not(:first-child) {
+    margin-top: 20px;
+  }
+  
+  .contact-icon {
+    margin-right: 16px;
+    fill: var(--secondary-light-text-color);
+  }
+  
+  .contacts-address-link {
+    font-style: normal;
+    font-size: 18px;
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+  
+    color: var(--secondary-light-text-color);
+  }
+  
+  .address {
+    font-weight: 700;
+  }
+  
+  .email {
+    text-decoration-line: underline;
+  }
+  
+  .contacts-time-wrapper {
+    margin-top: 44px;
+  }
+  .contacts-time-title {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    text-transform: uppercase;
+  
+    color: var(--main-light-text-color);
+  }
+  
+  .contacts-time-title::before {
+    content: '';
+    width: 60px;
+    height: 1px;
+  
+    background: rgba(157, 164, 189, 0.4);
+  }
+  
+  .contacts-time-text {
+    margin-top: 20px;
+  
+    font-size: 18px;
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+  
+    color: var(--secondary-light-text-color);
+  }
+  
+  @media screen and (max-width: 767px) {
+    .booking-title,
+    .contacts-title {
+      text-align: center;
+    }
+  
+    .online-field:not(:first-child) {
+      margin-top: 44px;
+    }
+  
+    .online-button {
+      margin: 0 auto;
+      margin-top: 44px;
+    }
+  }
+  
+  @media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
+    screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px),
+    screen and (min-resolution: 192dpi) and (max-width: 767px),
+    screen and (min-resolution: 2dppx) and (max-width: 767px) {
+    .contacts {
+      background-image: linear-gradient(var(--contacts-gradient), var(--contacts-gradient)),
+        url(./../images/contacts-mobile-@2x.jpg);
+    }
+  }
+  
+  @media screen and (min-width: 768px) {
+    .booking {
+      max-width: 768px;
+    }
+    .online {
+      padding: 100px 40px;
+    }
+  
+    .online-form {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  
+    .online-input {
+      width: 330px;
+    }
+  
+    .online-field-text {
+      margin-top: 44px;
+    }
+  
+    .contacts {
+      padding: 100px 40px;
+      width: 100%;
+  
+      background-image: linear-gradient(var(--contacts-gradient), var(--contacts-gradient)),
+        url(./../images/contacts-tablet.jpg);
+    }
+  }
+  
+  @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+    screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px),
+    screen and (min-resolution: 192dpi) and (min-width: 768px),
+    screen and (min-resolution: 2dppx) and (min-width: 768px) {
+    .contacts {
+      background-image: linear-gradient(var(--contacts-gradient), var(--contacts-gradient)),
+        url(./../images/contacts-tablet-@2x.jpg);
+    }
+  }
+  
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    .contacts-wrapper {
+      margin-top: 40px;
+      display: flex;
+    }
+  
+    .contacts-time-wrapper {
+      margin-top: 8px;
+      margin-left: 80px;
+    }
+  }
+  
+  @media screen and (min-width: 1200px) {
+    .booking {
+      max-width: 1600px;
+    }
+  
+    .booking-container {
+      margin: 0 auto;
+      width: 1200px;
+    }
+  
+    .section-wrapper {
+      display: flex;
+    }
+  
+    .online {
+      padding: 130px 15px;
+      width: calc((100% / 2) + 15px);
+      padding-right: 30px;
+    }
+  
+    .online-input {
+      width: 270px;
+    }
+  
+    .contacts {
+      padding: 130px 0;
+      padding-left: 100px;
+      width: calc((100% / 2) - 15px);
+      flex-grow: 1;
+  
+      background-image: linear-gradient(var(--contacts-gradient), var(--contacts-gradient)),
+        url(./../images/contacts-desktop.jpg);
+    }
+  
+    .contacts-time-wrapper {
+      margin-top: 70px;
+    }
+  }
+  
+  @media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+    screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1200px),
+    screen and (min-resolution: 192dpi) and (min-width: 1200px),
+    screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+    .contacts {
+      background-image: linear-gradient(var(--contacts-gradient), var(--contacts-gradient)),
+        url(./../images/contacts-desktop-@2x.jpg);
+    }
+  }

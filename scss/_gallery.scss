@@ -1,0 +1,39 @@
+.gallery {
+    padding: 84px 0;
+  }
+  
+  .gallery-list {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--element-gap);
+  }
+  
+  .gallery-top-text {
+    color: var(--main-dark-text-color);
+  }
+  
+  @media screen and (min-width: 768px) {
+    .gallery {
+      padding: 100px 0;
+    }
+  
+    .gallery-list {
+      margin-top: 44px;
+      flex-direction: row;
+      flex-wrap: wrap;
+      column-gap: 28px;
+    }
+  }
+  
+  @media screen and (min-width: 1200px) {
+    .gallery {
+      padding: 120px 0;
+    }
+  
+    .gallery-list {
+      margin-top: 44px;
+      display: flex;
+      justify-content: space-between;
+    }
+  }

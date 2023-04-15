@@ -1,0 +1,165 @@
+.benefits {
+  padding: 84px 0;
+}
+
+.benefits-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+}
+
+.benefits-list {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 30px;
+
+  order: 2;
+}
+
+.benefits-item {
+  padding: 20px 36px;
+  width: 100%;
+  height: 133px;
+
+  text-align: center;
+
+  background-color: #f7f7f7;
+}
+
+.benefits-content-wrapper {
+  order: 1;
+}
+
+.benefits-item .count {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.36;
+  letter-spacing: 0.05em;
+
+  color: var(--main-dark-text-color);
+}
+
+.benefits-item .count::after {
+  content: '+';
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.37;
+  vertical-align: top;
+
+  color: transparent;
+
+  text-shadow: 1px 7px var(--accent-color);
+}
+
+.benefits-item-text {
+  margin-top: 6px;
+
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+
+  color: var(--main-dark-text-color);
+}
+
+.benefits-top-text {
+  color: var(--main-dark-text-color);
+}
+
+.benefits-title {
+  font-size: 28px;
+  margin-top: 20px;
+  max-width: 420px;
+
+  color: var(--main-dark-text-color);
+}
+
+@media screen and (min-width: 480px) {
+  .benefits-wrapper {
+    gap: 154px;
+  }
+
+  .benefits-title {
+    font-size: 42px;
+  }
+
+  .benefits-list {
+    row-gap: 0;
+  }
+
+  .benefits-item {
+    padding: 20px 36px;
+    width: 194px;
+  }
+
+  .benefits-item:nth-child(odd) {
+    margin-right: 30px;
+  }
+
+  .benefits-item:nth-child(even) {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .benefits-bottom-text {
+    display: none;
+  }
+
+  .benefits-list {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .benefits-wrapper {
+    gap: 44px;
+  }
+
+  .benefits-bottom-text {
+    margin-top: 20px;
+    color: var(--secondary-dark-text-color);
+  }
+
+  .benefits-list {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .benefits-item {
+    padding: 20px 44px;
+    width: 210px;
+  }
+
+  .benefits-bottom-text {
+    max-width: 500px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .benefits {
+    padding: 120px 0;
+  }
+
+  .benefits-wrapper {
+    flex-direction: row;
+    padding: 0 85px;
+    gap: 130px;
+  }
+
+  .benefits-list {
+    justify-content: flex-start;
+    max-width: 370px;
+
+    order: 0;
+  }
+
+  .benefits-item {
+    padding: 20px 24px;
+    width: 170px;
+  }
+
+  .benefits-content-wrapper {
+    padding-top: 9px;
+  }
+}
